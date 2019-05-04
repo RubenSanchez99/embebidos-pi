@@ -9,7 +9,7 @@ signal = 25
 NUM_CYCLES = 10
 
 maxRed = 0
-minRed = 0
+minRed = 100000
 
 def setup():
   GPIO.setmode(GPIO.BCM)
