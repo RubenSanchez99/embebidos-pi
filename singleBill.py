@@ -55,7 +55,7 @@ def loop():
       
 
 def sendData(amount):
-    print("Sending $" + amount + "...")
+    print("Sending $" + str(amount) + "...")
     r = requests.post("http://165.227.53.110:5108/api/v1/payment/a275fcb7-3873-47ae-bb70-fe3aa46172a7", data=amount)
     print(r.status_code, r.reason)
     print(r.text[:300] + '...')
