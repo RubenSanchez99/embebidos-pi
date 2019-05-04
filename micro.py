@@ -49,8 +49,13 @@ def loop():
 
     print("Read: (", red, ", ", green, ", ", blue, ")")
     
-    if red > 14000 and green > 10700 and blue > 14000:
+    #if red > 14000 or green > 10700 or blue > 14000:
+    if red > 15000 or green > 15000 or blue > 15000:
       print("Hay billete")
+      if green > red:
+        print("es verde")
+      else:
+        print("es rojo")
       
     #if green<7000 and blue<7000 and red>12000:
     #  sendData(20)
