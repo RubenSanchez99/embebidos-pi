@@ -7,6 +7,9 @@ s3 = 24
 signal = 25
 NUM_CYCLES = 10
 
+maxRed = 0
+maxGreen = 0
+
 def setup():
   GPIO.setmode(GPIO.BCM)
   GPIO.setup(signal,GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -52,7 +55,14 @@ def loop():
     #if red > 14000 or green > 10700 or blue > 14000:
     if red > 15000 and green > 11000 and blue > 15000:
       diff = red - green
-      print("Hay billete, diff: " + str(diff))
+      #print("Hay billete, diff: " + str(diff))
+      if (maxRed < red):
+        maxRed = red
+        print("new maxRed: " + str(maxRed))
+
+      if (maxGreen < green):
+        maxGreen = green
+        print("new maxGreen: " + str(maxGreen))
       #if green > red:
       #  print("es verde")
       #else:
@@ -98,4 +108,6 @@ if __name__=='__main__':
         loop()
 
     except KeyboardInterrupt:
+        print("final maxRed: " + str(maxRed))
+        print("final maxRed: " + str(maxRed))
         endprogram()
