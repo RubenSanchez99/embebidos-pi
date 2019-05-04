@@ -19,6 +19,9 @@ def setup():
   
 
 def loop():
+  global maxGreen
+  global maxRed
+  
   temp = 1
   while(1):  
 
