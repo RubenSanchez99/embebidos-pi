@@ -49,7 +49,7 @@ def loop():
 
     print("Read: (", red, ", ", green, ", ", blue, ")")
     
-    if red > 14000 and green > 10700 and blue > 29000 and blue < 14000:
+    if red > 14000 and green > 10700 and blue > 29000:
       print("Hay billete")
       
     #if green<7000 and blue<7000 and red>12000:
