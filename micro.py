@@ -52,7 +52,7 @@ def loop():
     #if red > 14000 or green > 10700 or blue > 14000:
     if red > 15000 and green > 11000 and blue > 15000:
       diff = red - green
-      print("Hay billete, diff: " + diff)
+      print("Hay billete, diff: " + str(diff))
       #if green > red:
       #  print("es verde")
       #else:
