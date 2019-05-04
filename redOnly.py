@@ -39,7 +39,6 @@ def loop():
     
     #if red > 14000 or green > 10700 or blue > 14000:
     if red > 15000:
-      diff = red - green
       #print("Hay billete, diff: " + str(diff))
       if (maxRed < red):
         maxRed = red
