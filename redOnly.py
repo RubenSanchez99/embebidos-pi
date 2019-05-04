@@ -9,7 +9,7 @@ signal = 25
 NUM_CYCLES = 10
 
 maxRed = 0
-maxGreen = 0
+minRed = 0
 
 def setup():
   GPIO.setmode(GPIO.BCM)
@@ -20,7 +20,7 @@ def setup():
   
 
 def loop():
-  global maxGreen
+  global minRed
   global maxRed
   
   temp = 1
@@ -43,6 +43,10 @@ def loop():
       if (maxRed < red):
         maxRed = red
         print("new maxRed: " + str(maxRed))
+
+      if (minRed > red):
+        minRed = red
+        print("new minRed: " + str(minRed))
       #if green > red:
       #  print("es verde")
       #else:
@@ -89,4 +93,5 @@ if __name__=='__main__':
 
     except KeyboardInterrupt:
         print("final maxRed: " + str(maxRed))
+        print("final minRed: " + str(minRed))
         endprogram()
