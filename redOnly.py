@@ -35,7 +35,7 @@ def loop():
     duration = time.time() - start 
     red  = NUM_CYCLES / duration   
 
-    print("Read: (" + red + ")")
+    print("Read: ( " + str(red) + " )")
     
     #if red > 14000 or green > 10700 or blue > 14000:
     if red > 15000:
