@@ -63,7 +63,7 @@ def sendData(amount):
     amountStr = str(amount)
     headers = {'Content-Type': 'application/json'}
     print("Sending $" + amountStr + "...")
-    r = requests.post("http://165.227.53.110:5108/api/v1/payment/a275fcb7-3873-47ae-bb70-fe3aa46172a7", data="100", headers=headers)
+    r = requests.post("http://165.227.53.110:5108/api/v1/payment/a275fcb7-3873-47ae-bb70-fe3aa46172a7", data=amountStr, headers=headers)
     print(r.status_code, r.reason)
     print(r.text[:300] + '...')
     time.sleep(5)
