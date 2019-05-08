@@ -50,7 +50,7 @@ def loop():
     print("Read: (", red, ", ", green, ", ", blue, ")")
     
     #if red > 14000 or green > 10700 or blue > 14000:
-    if red > 23000 and green > 17300 and blue > 23000:
+    if red > 15000 and green > 11000 and blue > 15000:
       if red > green and red > blue:
           sendData(50)
       elif green > red and green > blue:
